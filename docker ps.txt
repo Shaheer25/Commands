@@ -23,3 +23,11 @@ docker exec -it <id>/<name> /bin/bash
 Difference b/n docker start and run is 
 run-> new image from internet and runs the container,
 start-> when container is stopped and a  alreday is pulled we can restart using start
+
+******Docker network***********
+
+docker network create mongo-network
+docker network ls
+docker run -p 27017:27017 -d --name mongodb --net mongo-network mongo
+docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME: admin MONGO_INITDB_ROOT_PASSWORD: password --name mongodb --net mongo-network mongo
+docker run -d -p 8081:8081 --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb mongo-express
