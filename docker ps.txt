@@ -1,0 +1,25 @@
+docker ps
+docker pull <image name> (used to pull docker images from internet)
+docker run <image name>
+docker run -d <image name> (detachable)
+docker stop <name>
+docker run/stop <id>
+docker ps -a (history)
+docker run <name>:<version> (It pulls and Runs)
+*****PORT BINDING***** if a image has same port number and same host(laptop) port we need to change the host port
+docker run -p6000(changing host port):6376(image port) <name>
+docker rmi IMAGE_ID
+
+****DEBUG*******
+docker logs <id>/<names>
+
+**Change name*
+ docker run -d -p6009:6379 --name redis-old(new Name) redis:4.0
+
+**GET the terminal of container******
+docker exec -it <id>/<name> /bin/bash 
+   -> ls, env , cd,exit etc........
+
+Difference b/n docker start and run is 
+run-> new image from internet and runs the container,
+start-> when container is stopped and a  alreday is pulled we can restart using start
