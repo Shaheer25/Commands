@@ -34,3 +34,7 @@ docker run -d -p 8081:8081 --net mongo-network --name mongo-express -e ME_CONFIG
 
 docker build -t shaheer1549/<name>.0.0.1.RELEASE .
 docker push shaheer1549/<name>.0.0.1.RELEASE .
+
+
+docker-compose -f mongo.yaml up -d
+docker-compose -f mongo.yaml down
