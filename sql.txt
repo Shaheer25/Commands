@@ -1,0 +1,8 @@
+DBMS is a way of storing data it can be a table, doc , graph , key value pairs:
+->DDL(Data def lang)== used when definig a schema ex. CREATE , ALTER , DROP, TRUNCATE , RENAME, COMMENT
+->DQL(query) == SELECT
+->DML(manipulation)==INSERT,DELETE,UPDATE,LOCK
+->DCL(Control)== GRANT,REVOKE
+->TCL(Transactional control)==COMMIT,ROLLBACK,SAVEPOINT
+->CONSTRAINTS== UNIQUE KEY , NOT NULL, PRIMARY KEY , FOREIGN KEY , CHECK,DEFAULT
+
