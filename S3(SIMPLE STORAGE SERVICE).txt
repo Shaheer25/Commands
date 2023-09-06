@@ -1,0 +1,42 @@
+S3(SIMPLE STORAGE SERVICE)
+STORES = General object storage
+Adv == Scalable , highly Available , Durable , Integration
+Uses : web hosting, Db backup , Pipelines
+
+Core Concepts
+*************
+Bucket = Container
+root level repository
+
+object = content(contains diff types File)max size = 5tb
+
+fetching data can be used = Url, i.e www.s3.amazonaws.com/<bucketName>/<objectName>
+
+Some Properties 
+
+1.Data Ingestion Pipeline
+  ***********************
+		A Stock market Ex -> Amazon Kinesis Firehouse -> S3 ->AWS Lambda
+
+A stock market has changing data so Amazon Kinesis Firehouse triggers or Creates events as per certain Conditions are passed like if the request exceeds above 5mb it sends to s3 bucket.AWS Lambda a serverless , event-driven platform which can make data aggregation , filtering the data when event is triggered the event contains info about object_id and name.
+
+
+2. Analytic and Dashboarding
+   *************************
+		Customers ---Selects form--> Amazon athena -. S3 -> Quicksight
+
+Customers can send sql commands using amazon athena in s3 buckets which will produce a graphlike structure of by analysing the Data.
+
+
+3.Event Driven Architecture
+  *************************
+		Customers--Raw Image-> S3--Process Image--> AWS Lambda--Notify--> AWS AppSync-->back2 customer
+
+Here Customer sends a raw image to S3 where it needs to proccess that image and using Aws lamda it'll Notify the AppSync which will produce a graphql and sends the processes image bacl to customer
+
+
+Command to add aws s3 in py:
+***************************
+
+Client=boto3.client('s3')
+myObject=Client.get_object(bucket='<bucket_name',key='<object_name>')

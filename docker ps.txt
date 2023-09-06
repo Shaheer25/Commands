@@ -31,3 +31,11 @@ docker network ls
 docker run -p 27017:27017 -d --name mongodb --net mongo-network mongo
 docker run -p 27017:27017 -d -e MONGO_INITDB_ROOT_USERNAME: admin MONGO_INITDB_ROOT_PASSWORD: password --name mongodb --net mongo-network mongo
 docker run -d -p 8081:8081 --net mongo-network --name mongo-express -e ME_CONFIG_MONGODB_SERVER=mongodb mongo-express
+docker build -t shaheer1549/<name>.0.0.1.RELEASE .
+docker push shaheer1549/<name>.0.0.1.RELEASE .
+
+
+docker-compose -f mongo.yaml up -d
+docker-compose -f mongo.yaml down
+=======
+
