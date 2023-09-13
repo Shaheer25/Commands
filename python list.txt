@@ -1,0 +1,33 @@
+access list items : indexing, slicing and if method
+
+change items from list : indexing, slicing and insert(2,"value")
+
+add items : append, insert and extend
+
+remove items = remove("value"), pop(index_number), del , clear
+
+loop list = next and for
+
+List comprehension = Shorter syntax for defining a list from existing list
+	ex: food=['cheese','fish','potato']
+
+	foodCopy=[x for x in food if "e" in x]
+	print(foodCopy)
+sort in list = sort(), sort(reverse=True) 
+
+copy=copy()
+
+
+join = append()= needs for loop , extend , +
+
+append()	Adds an element at the end of the list
+clear()	Removes all the elements from the list
+copy()	Returns a copy of the list
+count()	Returns the number of elements with the specified value
+extend()	Add the elements of a list (or any iterable), to the end of the current list
+index()	Returns the index of the first element with the specified value
+insert()	Adds an element at the specified position
+pop()	Removes the element at the specified position
+remove()	Removes the item with the specified value
+reverse()	Reverses the order of the list
+sort()	Sorts the list
